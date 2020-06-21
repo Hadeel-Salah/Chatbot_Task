@@ -1,0 +1,115 @@
+@import "susy";
+@import "compass/reset";
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: 0.2s;
+  margin-left: 5vw;
+  margin-top:3vh;
+  float: center;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+a:hover {
+  box-shadow: 0 0 10px #2196f2, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.chat-container {
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 60%
+}
+
+.chat-container p {
+  background-color: white;
+  font-family: Helvetica;
+}
+
+
+/* Darker chat container */
+.darker {
+  border-color: white;
+  background-color: #212121;
+}
+
+.darker p {
+  background-color: #212121;
+  color: white;
+}
+
+/* Clear floats */
+.chat-container::after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Style images */
+.chat-container img {
+  float: left;
+  max-width: 60px;
+  max-height: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.chat-container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+.time-left {
+  float: left;
+  color: #0000;
+}
+
+
+.clouds {
+	display:block;
+}
+
+.clouds{
+	z-index: 2;
+  background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
+	animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
